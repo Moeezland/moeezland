@@ -28,7 +28,7 @@
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 0.5px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     .logo {
@@ -99,7 +99,7 @@
     .service-card {
       background: #ffffff;
       border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       text-align: center;
       padding: 25px 20px;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -108,7 +108,7 @@
 
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 16px rgba(0,0,0,0.15);
     }
 
     .service-card img {
@@ -164,10 +164,11 @@
   </style>
 </head>
 <body>
+
   <header id="welcomeHeader">Welcome to Moeezland e-Civilian Portal</header>
 
   <div class="logo">
-    <img src="0d7cc0c7-b1b8-456a-bb2a-0b8bc59a06a4.png" alt="Moeezland Population Service Logo">
+    <img src="0d7cc0c7-b1b8-456a-bb2a-0b8bc59a06a4.png">
   </div>
 
   <div class="dashboard">
@@ -175,56 +176,55 @@
       <h1>Civilian Information</h1>
       <div id="profile">Loading your information...</div>
 
-      <!-- NEW 2FA SECTION (empty by default) -->
+      <!-- 2FA Elements -->
       <div id="twoFASection" style="margin-top:20px;text-align:center;"></div>
       <div id="twoFASetup"></div>
-
     </div>
 
     <!-- SERVICES (unchanged) -->
     <div class="services">
-      <div class="service-card" onclick="window.open('https://forms.gle/zbtuTHG1JuDEQEeB8', '_blank')">
-        <img src="permit.png" alt="Residence Permit">
+      <div class="service-card" onclick="window.open('https://forms.gle/zbtuTHG1JuDEQEeB8','_blank')">
+        <img src="permit.png">
         <h3>Residence Permit (الإقامة)</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7', '_blank')">
-        <img src="joinparliament.png" alt="Join Parliament">
+      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7','_blank')">
+        <img src="joinparliament.png">
         <h3>Join the Parliament (مجلس)</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/tRi261JA422tu35P9', '_blank')">
-        <img src="digitalid.png" alt="Civil Affairs">
+      <div class="service-card" onclick="window.open('https://forms.gle/tRi261JA422tu35P9','_blank')">
+        <img src="digitalid.png">
         <h3>Civil Affairs (الأحوال المدنية)</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7', '_blank')">
-        <img src="traffic.png" alt="Traffic Services">
+      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7','_blank')">
+        <img src="traffic.png">
         <h3>Traffic Services (المرور)</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/SvcBGstJsQV2ofCC8', '_blank')">
-        <img src="passport.png" alt="Passport">
+      <div class="service-card" onclick="window.open('https://forms.gle/SvcBGstJsQV2ofCC8','_blank')">
+        <img src="passport.png">
         <h3>Passport (الجوازات)</h3>
       </div>
 
       <div class="service-card disabled">
-        <img src="vote.png" alt="Voting">
-        <h3>Voting (التصويت) <br>Unavailable (غير متاح)</h3>
+        <img src="vote.png">
+        <h3>Voting (التصويت)<br>Unavailable</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/VkAywiaJNYeapUiV6', '_blank')">
-        <img src="f0727ec9-2f13-4644-bb6f-780726f0a201.png" alt="Sponsorship">
-        <h3>Sponsorship Management (الكفالة)</h3>
+      <div class="service-card" onclick="window.open('https://forms.gle/VkAywiaJNYeapUiV6','_blank')">
+        <img src="f0727ec9-2f13-4644-bb6f-780726f0a201.png">
+        <h3>Sponsorship (الكفالة)</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7', '_blank')">
-        <img src="9471a994-3c51-4668-adc1-20094f1ab0fe.png" alt="Prisoner Services">
+      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7','_blank')">
+        <img src="9471a994-3c51-4668-adc1-20094f1ab0fe.png">
         <h3>Prisoner Services (خدمات السجناء)</h3>
       </div>
 
-      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7', '_blank')">
-        <img src="legal.png" alt="Legal Affairs">
+      <div class="service-card" onclick="window.open('https://forms.gle/Hy8a9PHGkweNnxre7','_blank')">
+        <img src="legal.png">
         <h3>Legal Affairs (الشؤون القانونية)</h3>
       </div>
     </div>
@@ -233,7 +233,7 @@
   </div>
 
   <footer>
-    &copy; 2023-2026 Hereditary Monarchy of Moeezland - Moeezland Internet Police (MIP)
+    © 2023-2026 Hereditary Monarchy of Moeezland - Moeezland Internet Police (MIP)
   </footer>
 
   <script type="module">
@@ -254,9 +254,7 @@
     const auth = getAuth(app);
     const db = getFirestore(app);
 
-    const profileDiv = document.getElementById('profile');
-    const logoutBtn = document.getElementById('logoutBtn');
-    const welcomeHeader = document.getElementById('welcomeHeader');
+    const profileDiv = document.getElementById("profile");
     const twoFASection = document.getElementById("twoFASection");
     const twoFASetup = document.getElementById("twoFASetup");
 
@@ -268,126 +266,106 @@
 
     onAuthStateChanged(auth, async (user) => {
       if (!user) {
-        window.location.href = 'index.html';
+        window.location.href = "index.html";
         return;
       }
 
-      try {
-        const userDocRef = doc(db, 'users', user.uid);
-        const userSnap = await getDoc(userDocRef);
+      const userDocRef = doc(db, "users", user.uid);
+      const userSnap = await getDoc(userDocRef);
 
-        if (!userSnap.exists()) {
-          profileDiv.textContent = 'Profile not found. Please contact admin.';
-          return;
-        }
+      if (!userSnap.exists()) {
+        profileDiv.textContent = "Profile not found.";
+        return;
+      }
 
-        const data = userSnap.data();
+      const data = userSnap.data();
 
-        profileDiv.innerHTML = `
-          <div class="field"><strong>Username:</strong> ${displayOrDefault(data.username)}</div>
-          <div class="field"><strong>Email:</strong> ${displayOrDefault(data.email)}</div>
-          <div class="field"><strong>Civil ID:</strong> ${displayOrDefault(data.civilId)}</div>
-          <div class="field"><strong>Phone Number:</strong> ${displayOrDefault(data.phone)}</div>
-          <div class="field"><strong>Legal Name:</strong> ${displayOrDefault(data.legalName)}</div>
-          <div class="field"><strong>Sex:</strong> ${displayOrDefault(data.sex)}</div>
-          <div class="field"><strong>Date of Birth:</strong> ${displayOrDefault(data.dob)}</div>
-          <div class="field">
-            <strong>Digital ID:</strong>
-            ${
-              data.digitalid
-                ? `<button onclick="window.open('${data.digitalid}', '_blank')" 
-                    style="
-                      background:#0b56b3;
-                      color:white;
-                      border:none;
-                      padding:6px 12px;
-                      border-radius:6px;
-                      cursor:pointer;
-                      font-size:14px;
-                    ">
-                    View Digital ID
-                  </button>`
-                : '<span class="muted">(not provided)</span>'
-            }
-          </div>
+      profileDiv.innerHTML = `
+        <div class="field"><strong>Username:</strong> ${displayOrDefault(data.username)}</div>
+        <div class="field"><strong>Email:</strong> ${displayOrDefault(data.email)}</div>
+        <div class="field"><strong>Civil ID:</strong> ${displayOrDefault(data.civilId)}</div>
+        <div class="field"><strong>Phone Number:</strong> ${displayOrDefault(data.phone)}</div>
+        <div class="field"><strong>Legal Name:</strong> ${displayOrDefault(data.legalName)}</div>
+        <div class="field"><strong>Sex:</strong> ${displayOrDefault(data.sex)}</div>
+        <div class="field"><strong>Date of Birth:</strong> ${displayOrDefault(data.dob)}</div>
+      `;
+
+      /* ---------------- 2FA SETUP ---------------- */
+
+      if (!data.twoFAEnabled) {
+        twoFASection.innerHTML = `
+          <button id="enable2FABtn" 
+            style="background:#0b56b3;color:white;border:none;padding:10px 14px;border-radius:8px;">
+            Enable 2FA
+          </button>
         `;
 
-        welcomeHeader.textContent = `Ya Hala!, ${data.username || 'Citizen'} 🤝`;
+        document.getElementById("enable2FABtn").onclick = async () => {
+          const secret = Math.random().toString(36).substring(2, 18).toUpperCase();
+          console.log("Generated Secret:", secret);
 
-        /* ---------------- 2FA LOGIC ---------------- */
+          const issuer = encodeURIComponent("Moeezland Portal");
+          const userLabel = encodeURIComponent(data.username);
 
-        if (!data.twoFAEnabled) {
-          twoFASection.innerHTML = `
-            <button id="enable2FABtn" 
-              style="background:#0b56b3;color:white;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;">
-                Enable 2FA (Google Authenticator)
+          const otpURL =
+            `otpauth://totp/${issuer}:${userLabel}?secret=${secret}&issuer=${issuer}&algorithm=SHA1&digits=6&period=30`;
+
+          const qrURL =
+            `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(otpURL)}&size=200x200`;
+
+          twoFASetup.innerHTML = `
+            <p>Scan this QR code using Google Authenticator:</p>
+            <img src="${qrURL}" style="width:200px;height:200px;" />
+
+            <p>Manual Code:<br><strong>${secret}</strong></p>
+
+            <input id="verify2FA" placeholder="Enter 6-digit code" style="padding:8px;width:160px;margin-top:10px;" />
+
+            <button id="confirm2FA" 
+              style="margin-top:10px;background:#0b56b3;color:white;padding:8px 12px;border:none;border-radius:6px;">
+              Verify & Enable
             </button>
+
+            <p id="twoFAStatus" style="color:red;margin-top:10px;"></p>
           `;
 
-          document.getElementById("enable2FABtn").onclick = async () => {
-            const secret = Math.random().toString(36).substring(2, 18).toUpperCase();
+          document.getElementById("confirm2FA").onclick = async () => {
+            const code = document.getElementById("verify2FA").value.trim();
+            console.log("Entered Code:", code);
 
-            const issuer = encodeURIComponent("Moeezland Portal");
-            const userLabel = encodeURIComponent(data.username);
-            const otpURL =
-              `otpauth://totp/${issuer}:${userLabel}?secret=${secret}&issuer=${issuer}&algorithm=SHA1&digits=6&period=30`;
+            if (!verifyTOTP(secret, code)) {
+              document.getElementById("twoFAStatus").textContent = "Invalid code.";
+              console.warn("TOTP verification failed");
+              return;
+            }
 
-            const qrURL =
-              `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(otpURL)}&size=200x200`;
-
-            twoFASetup.innerHTML = `
-              <p>Scan this QR code using Google Authenticator:</p>
-              <img src="${qrURL}" style="width:200px;height:200px;border-radius:10px;" />
-              <p>Or enter manually: <br><strong>${secret}</strong></p>
-
-              <input id="verify2FA" placeholder="Enter 6-digit code" 
-                style="padding:8px;width:160px;margin-top:10px;border-radius:6px;border:1px solid #ccc;" />
-
-              <button id="confirm2FA" 
-                style="margin-top:10px;background:#0b56b3;color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;">
-                Verify & Enable
-              </button>
-
-              <p id="twoFAStatus" style="color:red;margin-top:10px;"></p>
-            `;
-
-            document.getElementById("confirm2FA").onclick = async () => {
-              const entered = document.getElementById("verify2FA").value.trim();
-
-              if (!verifyTOTP(secret, entered)) {
-                document.getElementById("twoFAStatus").textContent = "Invalid 6-digit code";
-                return;
-              }
-
-              await updateDoc(doc(db, "users", user.uid), {
+            try {
+              await updateDoc(userDocRef, {
                 twoFAEnabled: true,
                 twoFASecret: secret
               });
 
-              alert("2FA enabled successfully!");
+              alert("2FA Enabled!");
+              console.log("Firestore updated.");
               location.reload();
-            };
+            } catch (err) {
+              alert("Error enabling 2FA: " + err.message);
+              console.error(err);
+            }
           };
-        } else {
-          twoFASection.innerHTML = `
-            <p style="color:green;font-weight:600;">2FA is enabled on your account</p>
-          `;
-        }
-
-        /* ---------------- END 2FA LOGIC ---------------- */
-
-      } catch (err) {
-        console.error(err);
-        profileDiv.textContent = 'Error loading data. Please try again later.';
+        };
+      } else {
+        twoFASection.innerHTML = `<p style="color:green;font-weight:600;">2FA is enabled</p>`;
       }
+
     });
 
-    logoutBtn.addEventListener('click', async () => {
+    document.getElementById("logoutBtn").onclick = async () => {
       await signOut(auth);
-      window.location.href = 'index.html';
-    });
+      window.location.href = "index.html";
+    };
 
-    /* ------------------ TOTP FUNCTIONS ------------------ */
+    /* ---------------- TOTP FUNCTIONS ---------------- */
 
     function b32decode(s) {
       const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
@@ -398,7 +376,7 @@
       }
       const bytes = [];
       for (let i = 0; i + 8 <= bits.length; i += 8) {
-        bytes.push(parseInt(bits.substring(i, i + 8), 2));
+        bytes.push(parseInt(bits.substring(i,8+i),2));
       }
       return new Uint8Array(bytes);
     }
@@ -414,25 +392,23 @@
       );
 
       const offset = hmac.words[hmac.words.length - 1] & 0xf;
+      const binary = ((hmac.words[offset] & 0x7fffffff) >>> 0) % 1000000;
 
-      const binary =
-        ((hmac.words[offset] & 0x7fffffff) >>> 0) % 1000000;
-
-      return binary.toString().padStart(6, "0");
+      return binary.toString().padStart(6,"0");
     }
 
     function verifyTOTP(secret, token) {
       const key = b32decode(secret);
-      const step = 30;
-      const epoch = Math.floor(Date.now() / 1000);
-      const counter = Math.floor(epoch / step);
+      const epoch = Math.floor(Date.now()/1000);
+      const counter = Math.floor(epoch/30);
 
-      for (let i = -1; i <= 1; i++) {
-        if (generateTOTP(key, counter + i) === token) return true;
+      for (let i=-1;i<=1;i++) {
+        if (generateTOTP(key, counter+i) === token)
+          return true;
       }
       return false;
     }
-
   </script>
+
 </body>
 </html>
