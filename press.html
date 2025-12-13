@@ -3,32 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Moeezland Gov — Press Releases</title>
+  <title>Moeezland Gov</title>
+  <meta name="description" content="Official website of the Moeezland government" />
+  <link rel="icon" href="/favicon.ico" />
 
   <style>
     :root{
       --blue:#0f4ea8;
+      --light:#eef2f7;
+      --bg:#0b0b0c;
       --muted:#6b7280;
-      --max-width:900px;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      --white:#ffffff;
+      --max-width:1200px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
 
+    *{box-sizing:border-box}
     body{
       margin:0;
-      background:#f3f6fb;
-      color:#05243a;
+      background:linear-gradient(180deg,#071018 0%, #071018 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .trust-banner{
+      background:var(--light);
+      color:#09233a;
+      font-size:14px;
+      padding:10px 16px;
+      text-align:center;
+    }
+
+    .trust-banner a{
+      color:#0b4ea8;
+      text-decoration:underline;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .trust-expand {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.35s ease;
+      background:#eef2f7;
+      color:#072036;
+      padding:0 22px;
+      border-bottom:1px solid #d2dae2;
+    }
+
+    .trust-expand.open {
+      max-height: 300px;
+      opacity: 1;
+      padding:18px 22px;
+    }
+
+    .verify-row {
+      display:flex;
+      justify-content:flex-start;
+      align-items:flex-start;
+      gap:40px;
+    }
+
+    @media (max-width:750px){
+      .verify-row { flex-direction:column; gap:18px; }
+    }
+
+    .verify-item {
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      max-width:500px;
+    }
+
+    .verify-item img {
+      width:42px;
+      height:42px;
+      border-radius:50%;
     }
 
     header{
-      background:white;
+      background:rgba(255,255,255,0.95);
+      color:#05243a;
       position:sticky;
       top:0;
       z-index:50;
-      box-shadow:0 1px 0 rgba(0,0,0,0.06);
+      backdrop-filter:blur(6px);
+      box-shadow:0 1px 0 rgba(2,6,23,0.06)
     }
 
     .nav{
-      max-width:1200px;
+      max-width:var(--max-width);
       margin:0 auto;
       display:flex;
       align-items:center;
@@ -36,14 +101,18 @@
       padding:14px;
     }
 
-    .brand{
+    .brand {
       display:flex;
       align-items:center;
       gap:12px;
     }
+    .brand h1{
+  font-size:19.5px;
+    }
 
-    .brand img{
+    .govlogo {
       height:46px;
+      object-fit:contain;
     }
 
     nav ul{
@@ -55,8 +124,8 @@
     }
 
     nav a{
-      text-decoration:none;
       color:#0b3b59;
+      text-decoration:none;
       font-weight:600;
     }
 
@@ -68,74 +137,131 @@
       text-decoration:none;
     }
 
+    .hero{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero .media {
+      height:66vh;
+      min-height:420px;
+      background-image:url("welcome.png");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      width:100%;
+    }
+
+    .hero .overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+    }
+
     .container{
       max-width:var(--max-width);
       margin:0 auto;
       padding:48px 24px;
     }
 
-    .page-title{
-      margin-bottom:40px;
+    .hero-content{
+  max-width:640px;
+  color:var(--white);
+  text-shadow:0 6px 20px rgba(0,0,0,0.6);
+
+  /* FIX: keep left alignment without breaking small monitors */
+  margin-left:-200px;
+}
+
+    .hero-logo-wrapper { margin-bottom:14px; }
+
+    .hero-logo {
+  height:100px; /* slightly smaller crest */
+  object-fit:contain;
+}
+
+.hero h2{
+  font-size:36px; /* down from 44 */
+  line-height:1.1;
+  margin:0 0 12px 0;
+}
+
+.hero p{
+  font-size:15.5px;
+  color:rgba(255,255,255,0.92);
+  line-height:1.55;
+  margin:0 0 22px;
+  max-width:580px; /* keeps it readable */
+}
+
+.hero .btn{
+  display:inline-block;
+  background:var(--blue);
+  color:white;
+  padding:9px 14px; /* smaller but still clickable */
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 6px 16px rgba(11,78,168,0.22);
     }
 
-    .page-title h2{
-      font-size:34px;
-      margin-bottom:8px;
+    .quick{
+      background:#e9eef4;
+      color:#0b1f2b;
+      padding:48px 24px;
     }
 
-    .page-title p{
-      color:var(--muted);
-      line-height:1.6;
+    .quick .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      max-width:var(--max-width);
+      margin:0 auto;
     }
 
-    .press-entry{
+    .card{
       background:white;
       border-radius:14px;
-      padding:26px;
-      margin-bottom:26px;
-      border:1px solid #e5e7eb;
+      padding:22px;
+      color:#05243a;
+      box-shadow:0 10px 30px rgba(2,6,23,0.06);
+      display:flex;
+      gap:12px;
+      align-items:center;
+      transition:transform .15s ease, box-shadow .15s ease;
     }
 
-    .press-meta{
-      font-size:13px;
-      color:var(--muted);
-      margin-bottom:6px;
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 34px rgba(2,6,23,0.1);
     }
 
-    .press-entry h3{
-      margin:0 0 14px;
-      font-size:22px;
-      color:var(--blue);
-    }
-
-    .press-image{
-      margin:16px 0;
-      border-radius:12px;
-      overflow:hidden;
-      border:1px solid #e5e7eb;
-    }
-
-    .press-image img{
-      width:100%;
-      display:block;
-    }
-
-    .press-entry p{
-      line-height:1.7;
-      margin-bottom:14px;
+    .card img{
+      width:56px;
+      height:56px;
+      object-fit:cover;
+      border-radius:8px;
     }
 
     footer{
-      background:#05080c;
-      color:rgba(255,255,255,0.75);
-      padding:40px 24px;
-      margin-top:48px;
-      font-size:13px;
+      padding:28px 24px;
+      color:rgba(255,255,255,0.8);
       text-align:center;
     }
 
-    @media(max-width:750px){
-      nav ul{display:none;}
+    @media (max-width:750px){
+      .hero-content {
+        margin-left:0 !important;
+        text-align:center;
+      }
+      .hero-logo { height:90px; }
+      .hero h2 { font-size:30px; }
+      .hero p { font-size:15px; }
+      .hero .btn { padding:12px 20px; font-size:16px; }
+      nav ul { display:none; }
+      .cta { padding:8px 12px; }
+      .quick .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -192,6 +318,12 @@
   </ul>
 </nav>
 
+      <!-- UPDATED LINK -->
+      <a class="cta" href="https://portal.moeezland.com" target="_blank">Your account</a>
+
+    </div>
+  </header>
+  
   <!-- 10 DEC 2025 -->
   <article class="press-entry">
     <div class="press-meta">Published: 10 December 2025 · 16:30 PKT</div>
@@ -264,4 +396,5 @@
 
 </body>
 </html>
+
 
